@@ -34,7 +34,7 @@ public class KitchenOrder : Aggregate {
     /**
      * Private no-args ctor to support reflection ONLY.
      */
-    @SuppressWarnings("unused")
+    
     private KitchenOrder() {
         this.@ref= null;
         this.onlineOrderRef = null;
@@ -122,7 +122,7 @@ public class KitchenOrder : Aggregate {
         return this.state == State.ASSEMBLED;
     }
 
-    @Override
+    
     public KitchenOrder identity() {
         return KitchenOrder.builder()
                 .ref(KitchenOrderRef.IDENTITY)
@@ -131,12 +131,12 @@ public class KitchenOrder : Aggregate {
                 .build();
     }
 
-    @Override
+    
     public BiFunction<KitchenOrder, KitchenOrderEvent, KitchenOrder> accumulatorFunction(EventLog eventLog) {
         return new Accumulator(eventLog);
     }
 
-    @Override
+    
     public OrderState state() {
         return new OrderState(@ref, onlineOrderRef, pizzas);
     }
@@ -157,7 +157,7 @@ public class KitchenOrder : Aggregate {
             this.eventLog = eventLog;
         }
 
-        @Override
+        
         public KitchenOrder apply(KitchenOrder kitchenOrder, KitchenOrderEvent kitchenOrderEvent) {
             if (kitchenOrderEvent instanceof KitchenOrderAddedEvent) {
                 KitchenOrderAddedEvent oae = (KitchenOrderAddedEvent) kitchenOrderEvent;

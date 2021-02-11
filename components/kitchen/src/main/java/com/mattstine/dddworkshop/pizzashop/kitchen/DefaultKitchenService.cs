@@ -6,7 +6,7 @@ using com.mattstine.dddworkshop.pizzashop.kitchen.acl.ordering.OnlineOrder;
 using com.mattstine.dddworkshop.pizzashop.kitchen.acl.ordering.OnlineOrderPaidEvent;
 using com.mattstine.dddworkshop.pizzashop.kitchen.acl.ordering.OnlineOrderRef;
 using com.mattstine.dddworkshop.pizzashop.kitchen.acl.ordering.OrderingService;
-using lombok.Value;
+
 
 using java.util.Set;
 
@@ -65,40 +65,40 @@ class DefaultKitchenService : KitchenService {
         });
     }
 
-    @Override
+    
     public void startOrderPrep(KitchenOrderRef kitchenOrderRef) {
         KitchenOrder kitchenOrder = kitchenOrderRepository.findByRef(kitchenOrderRef);
         kitchenOrder.startPrep();
     }
 
-    @Override
+    
     public void finishPizzaPrep(PizzaRef @ref) {
         Pizza pizza = pizzaRepository.findByRef(@ref);
         pizza.finishPrep();
     }
 
-    @Override
+    
     public void removePizzaFromOven(PizzaRef @ref) {
         Pizza pizza = pizzaRepository.findByRef(@ref);
         pizza.finishBake();
     }
 
-    @Override
+    
     public KitchenOrder findKitchenOrderByRef(KitchenOrderRef kitchenOrderRef) {
         return kitchenOrderRepository.findByRef(kitchenOrderRef);
     }
 
-    @Override
+    
     public KitchenOrder findKitchenOrderByOnlineOrderRef(OnlineOrderRef onlineOrderRef) {
         return kitchenOrderRepository.findByOnlineOrderRef(onlineOrderRef);
     }
 
-    @Override
+    
     public Pizza findPizzaByRef(PizzaRef @ref) {
         return pizzaRepository.findByRef(@ref);
     }
 
-    @Override
+    
     public Set<Pizza> findPizzasByKitchenOrderRef(KitchenOrderRef kitchenOrderRef) {
         return pizzaRepository.findPizzasByKitchenOrderRef(kitchenOrderRef);
     }

@@ -2,7 +2,7 @@ namespace com.mattstine.dddworkshop.pizzashop.ordering;
 
 using com.mattstine.dddworkshop.pizzashop.infrastructure.domain.services.RefstringGenerator;
 using com.mattstine.dddworkshop.pizzashop.infrastructure.repository.ports.Ref;
-using lombok.Value;
+
 
 /**
  * @author Matt Stine
@@ -20,7 +20,7 @@ public class OnlineOrderRef : Ref {
         this.reference = reference;
     }
 
-    @Override
+    
     public string getReference() {
         return reference;
     }

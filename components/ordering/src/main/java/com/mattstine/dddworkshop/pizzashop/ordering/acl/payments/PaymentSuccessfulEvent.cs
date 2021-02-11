@@ -1,7 +1,7 @@
 namespace com.mattstine.dddworkshop.pizzashop.ordering.acl.payments;
 
-using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports.Event;
-using lombok.Value;
+using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports;
+
 using lombok.experimental.NonFinal;
 
 /**

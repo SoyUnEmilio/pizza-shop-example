@@ -2,7 +2,7 @@ namespace com.mattstine.dddworkshop.pizzashop.payments;
 
 using com.mattstine.dddworkshop.pizzashop.infrastructure.domain.valuetypes;
 using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports;
-using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports.EventHandler;
+using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports;
 using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports;
 using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports;
 using Moq;

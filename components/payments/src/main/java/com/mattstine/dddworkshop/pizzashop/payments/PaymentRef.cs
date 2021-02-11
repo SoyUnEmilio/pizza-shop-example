@@ -1,23 +1,31 @@
-namespace com.mattstine.dddworkshop.pizzashop.payments;
+namespace com.mattstine.dddworkshop.pizzashop.payments
+{
+    using com.mattstine.dddworkshop.pizzashop.infrastructure.domain.services;
+    using com.mattstine.dddworkshop.pizzashop.infrastructure.repository.ports;
 
-using com.mattstine.dddworkshop.pizzashop.infrastructure.domain.services.RefstringGenerator;
-using com.mattstine.dddworkshop.pizzashop.infrastructure.repository.ports.Ref;
-using lombok.Value;
+    /**
+     * @author Matt Stine
+     */
 
-/**
- * @author Matt Stine
- */
+    public class PaymentRef : Ref
+    {
+        public static PaymentRef IDENTITY = new PaymentRef("");
+        string reference;
 
-public class PaymentRef : Ref {
-    public static PaymentRef IDENTITY = new PaymentRef("");
-    string reference;
+        public PaymentRef()
+        {
+            reference = RefstringGenerator.generateRefstring();
+        }
 
-    public PaymentRef() {
-        reference = RefstringGenerator.generateRefstring();
-    }
 
-    @SuppressWarnings("SameParameterValue")
-    PaymentRef(string reference) {
-        this.reference = reference;
+        PaymentRef(string reference)
+        {
+            this.reference = reference;
+        }
+
+        public string getReference()
+        {
+            return reference;
+        }
     }
 }

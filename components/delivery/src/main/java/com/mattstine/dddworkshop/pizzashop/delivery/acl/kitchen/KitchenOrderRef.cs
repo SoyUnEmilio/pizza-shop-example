@@ -1,6 +1,6 @@
 namespace com.mattstine.dddworkshop.pizzashop.delivery.acl.kitchen
 {
-    using com.mattstine.dddworkshop.pizzashop.infrastructure.repository.ports.Ref;
+    using com.mattstine.dddworkshop.pizzashop.infrastructure.repository.ports;
 
     /**
      * @author Matt Stine
@@ -10,6 +10,16 @@ namespace com.mattstine.dddworkshop.pizzashop.delivery.acl.kitchen
         public static KitchenOrderRef IDENTITY = new KitchenOrderRef("");
 
         string reference;
+
+        public KitchenOrderRef(string reference)
+        {
+            this.reference = reference;
+        }
+
+        public string getReference()
+        {
+            return reference;
+        }
     }
 }
 

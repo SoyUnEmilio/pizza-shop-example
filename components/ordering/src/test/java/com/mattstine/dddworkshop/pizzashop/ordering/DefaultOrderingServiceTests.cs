@@ -1,7 +1,7 @@
 namespace com.mattstine.dddworkshop.pizzashop.ordering;
 
 using com.mattstine.dddworkshop.pizzashop.infrastructure.domain.valuetypes;
-using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports.EventHandler;
+using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports;
 using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports;
 using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports;
 using com.mattstine.dddworkshop.pizzashop.ordering.acl.payments.PaymentRef;

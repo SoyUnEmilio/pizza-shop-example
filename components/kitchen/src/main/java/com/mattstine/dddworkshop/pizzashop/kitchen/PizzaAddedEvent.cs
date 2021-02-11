@@ -1,7 +1,7 @@
 namespace com.mattstine.dddworkshop.pizzashop.kitchen;
 
-using com.mattstine.dddworkshop.pizzashop.infrastructure.repository.ports.RepositoryAddEvent;
-using lombok.Value;
+using com.mattstine.dddworkshop.pizzashop.infrastructure.repository.ports;
+
 
 
 class PizzaAddedEvent : PizzaEvent, RepositoryAddEvent {

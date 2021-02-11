@@ -1,7 +1,10 @@
-namespace com.mattstine.dddworkshop.pizzashop.infrastructure.repository.ports;
-
-/**
- * @author Matt Stine
- */
-public interface AggregateState {
+namespace com.mattstine.dddworkshop.pizzashop.infrastructure.repository.ports
+{
+    /**
+     * @author Matt Stine
+     */
+    public interface AggregateState
+    {
+    }
 }
+

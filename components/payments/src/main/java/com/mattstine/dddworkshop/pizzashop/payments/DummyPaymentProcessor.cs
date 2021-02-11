@@ -14,7 +14,7 @@ class DummyPaymentProcessor : PaymentProcessor {
         return singleton;
     }
 
-    @Override
+    
     public void request(Payment payment) {
         // Do nothing
     }

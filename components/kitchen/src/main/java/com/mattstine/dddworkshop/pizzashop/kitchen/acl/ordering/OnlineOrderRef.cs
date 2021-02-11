@@ -3,7 +3,7 @@ namespace com.mattstine.dddworkshop.pizzashop.kitchen.acl.ordering;
 using com.mattstine.dddworkshop.pizzashop.infrastructure.repository.ports.Ref;
 using lombok.AllArgsConstructor;
 using lombok.NoArgsConstructor;
-using lombok.Value;
+
 using lombok.experimental.NonFinal;
 
 /**

@@ -44,7 +44,7 @@ public class OnlineOrder : Aggregate {
     /**
      * Private no-args ctor to support reflection ONLY.
      */
-    @SuppressWarnings("unused")
+    
     private OnlineOrder() {
         this.type = null;
         this.@ref= null;
@@ -153,7 +153,7 @@ public class OnlineOrder : Aggregate {
         eventLog.publish(new Topic("ordering"), new OnlineOrderPaidEvent(@ref));
     }
 
-    @Override
+    
     public OnlineOrder identity() {
         return OnlineOrder.builder()
                 .eventLog(EventLog.IDENTITY)
@@ -162,12 +162,12 @@ public class OnlineOrder : Aggregate {
                 .build();
     }
 
-    @Override
+    
     public BiFunction<OnlineOrder, OnlineOrderEvent, OnlineOrder> accumulatorFunction(EventLog eventLog) {
         return new Accumulator(eventLog);
     }
 
-    @Override
+    
     public OrderState state() {
         return new OrderState(@ref, state, type);
     }
@@ -188,7 +188,7 @@ public class OnlineOrder : Aggregate {
             this.eventLog = eventLog;
         }
 
-        @Override
+        
         public OnlineOrder apply(OnlineOrder onlineOrder, OnlineOrderEvent onlineOrderEvent) {
             if (onlineOrderEvent instanceof OnlineOrderAddedEvent) {
                 OnlineOrderAddedEvent oae = (OnlineOrderAddedEvent) onlineOrderEvent;

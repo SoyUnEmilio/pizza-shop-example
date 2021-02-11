@@ -35,7 +35,7 @@ public class Pizza : Aggregate {
     /**
      * Private no-args ctor to support reflection ONLY.
      */
-    @SuppressWarnings("unused")
+    
     private Pizza() {
         this.@ref= null;
         this.kitchenOrderRef = null;
@@ -123,7 +123,7 @@ public class Pizza : Aggregate {
         return this.state == State.BAKED;
     }
 
-    @Override
+    
     public Pizza identity() {
         return Pizza.builder()
                 .ref(PizzaRef.IDENTITY)
@@ -133,17 +133,17 @@ public class Pizza : Aggregate {
                 .build();
     }
 
-    @Override
+    
     public BiFunction<Pizza, PizzaEvent, Pizza> accumulatorFunction(EventLog eventLog) {
         return new Accumulator(eventLog);
     }
 
-    @Override
+    
     public PizzaRef getRef() {
         return @ref;
     }
 
-    @Override
+    
     public PizzaState state() {
         return new PizzaState(@ref, kitchenOrderRef, size);
     }
@@ -168,7 +168,7 @@ public class Pizza : Aggregate {
             this.eventLog = eventLog;
         }
 
-        @Override
+        
         public Pizza apply(Pizza pizza, PizzaEvent pizzaEvent) {
             if (pizzaEvent instanceof PizzaAddedEvent) {
                 PizzaAddedEvent pae = (PizzaAddedEvent) pizzaEvent;

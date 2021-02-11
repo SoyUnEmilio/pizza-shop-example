@@ -1,10 +1,8 @@
 namespace com.mattstine.dddworkshop.pizzashop.delivery
 {
-    using com.mattstine.dddworkshop.pizzashop.delivery.acl.kitchen.KitchenOrderRef;
-    using com.mattstine.dddworkshop.pizzashop.delivery.acl.kitchen.KitchenService;
-    using com.mattstine.dddworkshop.pizzashop.delivery.acl.ordering.OnlineOrderRef;
-    using com.mattstine.dddworkshop.pizzashop.delivery.acl.ordering.OrderingService;
-    using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports.EventHandler;
+    using com.mattstine.dddworkshop.pizzashop.delivery.acl.kitchen;
+    using com.mattstine.dddworkshop.pizzashop.delivery.acl.ordering;
+    using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports;
     using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports;
     using com.mattstine.dddworkshop.pizzashop.infrastructure.events.ports;
 
